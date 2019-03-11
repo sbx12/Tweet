@@ -8,10 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextClock;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.codepath.apps.restclienttemplate.models.Tweet;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -37,7 +40,9 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         Tweet tweet = tweets.get(position);
         holder.tvBody.setText(tweet.body);
         holder.tvScreenName.setText(tweet.user.screenName);
-        holder.uidTweet.setText(String.valueOf(tweet.uid));
+        holder.tvcreatedAt.setText(tweet.getFormattedTimestamp());
+        holder.tvtweetRepostCount.setText(tweet.reTweetCount);
+        holder.tvfavoriteCount.setText(tweet.favoriteCount);
 
         Glide.with(context).load(tweet.user.profileImageUrl).into(holder.ivProfileImage);
     }
@@ -62,14 +67,18 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         public ImageView ivProfileImage;
         public TextView tvScreenName;
         public TextView tvBody;
-        public TextView uidTweet;
+        public TextView tvcreatedAt;
+        public TextView tvtweetRepostCount;
+        public TextView tvfavoriteCount;
 
         public ViewHolder(View itemView){
             super(itemView);
             ivProfileImage = itemView.findViewById(R.id.ivProfileImage);
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             tvBody = itemView.findViewById(R.id.tvBody);
-            uidTweet = itemView.findViewById(R.id.uidTweet);
+            tvcreatedAt = itemView.findViewById(R.id.tvcreatedAt);
+            tvtweetRepostCount = itemView.findViewById(R.id.tvreTweetCount);
+            tvfavoriteCount = itemView.findViewById(R.id.tvFavoriteCount);
         }
     }
 }
