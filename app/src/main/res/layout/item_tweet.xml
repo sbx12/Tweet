@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp">
 
+
+
     <ImageView
         android:id="@+id/ivProfileImage"
         android:layout_width="62dp"
@@ -35,6 +37,8 @@
         android:layout_marginRight="5dp"
         android:layout_toStartOf="@+id/tvcreatedAt"
         android:layout_toEndOf="@+id/ivProfileImage"
+        android:autoLink="all"
+        android:linksClickable="true"
         android:text="This Is MY TWEET" />
 
     <TextView
@@ -72,6 +76,7 @@
         android:layout_marginStart="197dp"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="-2dp"
+
         app:srcCompat="@drawable/ic_vector_heart_stroke" />
 
     <ImageView

@@ -2,4 +2,13 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_selected="true" android:drawable="@drawable/ic_vector_home"/>
     <item android:drawable="@drawable/ic_vector_home_stroke"/>
+
+    <item android:state_selected="true" android:drawable="@drawable/ic_vector_heart"/>
+    <item android:drawable="@drawable/ic_vector_heart_stroke"/>
+
+    <item android:state_selected="true" android:drawable="@drawable/ic_vector_retweet"/>
+    <item android:drawable="@drawable/ic_vector_retweet_stroke"/>
+
+    <item android:state_selected="true" android:drawable="@drawable/ic_vector_messages"/>
+    <item android:drawable="@drawable/ic_vector_messages_stroke"/>
 </selector>
