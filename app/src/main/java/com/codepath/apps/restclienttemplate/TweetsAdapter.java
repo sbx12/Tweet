@@ -67,7 +67,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         holder.tvtweetRepostCount.setText(tweet.reTweetCount);
         holder.tvfavoriteCount.setText(tweet.favoriteCount);
 
-        Glide.with(context).load(tweet.user.profileImageUrl).apply(new RequestOptions().transform(new RoundedCornersTransformation(90, 10))).into(holder.ivProfileImage);
+        Glide.with(context).load(tweet.user.profileImageUrl).apply(new RequestOptions().transform(new RoundedCornersTransformation(100, 10))).into(holder.ivProfileImage);
 
         if(tweet.hasMedia) {
             switch (tweet.mediaType) {
